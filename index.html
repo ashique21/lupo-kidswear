@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lupo - Kids Clothing & Accessories</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Lupo Kids</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Collection</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+          <h1>Style<br>Their Joy</h1>
+          <p>Adorable, comfortable & sunshine-ready kidswear.</p>
+          <div class="cta-buttons">
+            <button onclick="scrollToGallery()">Shop Collection</button>
+            <button class="outline" onclick="scrollToContact()">Visit Store</button>
+          </div>
+        </div>
+      </div>      
+    <div class="hero-bg"></div>
+    <div class="floating-shapes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>      
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Lupo</h2>
+    <p>We bring joy to little wardrobes with trendy, playful and oh-so-comfy clothing for kids. From weekend fun to festive sparkle, we’ve got it all.</p>
+  </section>
+
+  <section id="gallery" class="section">
+    <h2>Our Collection</h2>
+    <div class="gallery">
+      <div class="card"><img src="img/image1.jpg" alt="Summer Vibes"><p>Summer Vibes</p></div>
+      <div class="card"><img src="img/image2.jpg" alt="Festive Fits"><p>Festive Fits</p></div>
+      <div class="card"><img src="img/image1.jpg" alt="Everyday Style"><p>Everyday Style</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Get in Touch</h2>
+    <p>📍 Pookkottumpadam<br>
+       📞 +91 7510101017<br>
+       📸 <a href="https://www.instagram.com/lupo_kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Follow us on Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lupo. Made with sunshine & style.</p>
+  </footer>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+    function scrollToGallery() {
+      document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
