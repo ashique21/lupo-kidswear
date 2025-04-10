@@ -11,33 +11,35 @@
   <header class="navbar">
     <div class="container">
       <div class="logo">Lupo Kids</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#gallery">Collection</a>
-        <a href="#contact">Contact</a>
+      <!-- ✅ Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="mobile-menu">
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#gallery" onclick="closeMenu()">Collection</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-        <div class="hero-text">
-          <h1>Style<br>Their Joy</h1>
-          <p>Adorable, comfortable & sunshine-ready kidswear.</p>
-          <div class="cta-buttons">
-            <button onclick="scrollToGallery()">Shop Collection</button>
-            <button class="outline" onclick="scrollToContact()">Visit Store</button>
-          </div>
+      <div class="hero-text">
+        <h1>Style<br>Their Joy</h1>
+        <p>Adorable, comfortable & sunshine-ready kidswear.</p>
+        <div class="cta-buttons">
+          <button onclick="scrollToGallery()">Shop Collection</button>
+          <button class="outline" onclick="scrollToContact()">Visit Store</button>
         </div>
-      </div>      
+      </div>
+    </div>      
     <div class="hero-bg"></div>
     <div class="floating-shapes">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>      
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>      
   </section>
 
   <section id="about" class="section">
@@ -66,12 +68,30 @@
     <p>&copy; 2025 Lupo. Made with sunshine & style.</p>
   </footer>
 
+  <!-- ✅ Script for scroll and menu toggle -->
   <script>
     function scrollToContact() {
       document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     }
+
     function scrollToGallery() {
       document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById("mobile-menu");
+      const toggle = document.getElementById("menu-toggle");
+      nav.classList.toggle("active");
+      toggle.textContent = nav.classList.contains("active") ? "✖" : "☰";
+    }
+
+    function closeMenu() {
+      const nav = document.getElementById("mobile-menu");
+      const toggle = document.getElementById("menu-toggle");
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        toggle.textContent = "☰";
+      }
     }
   </script>
 </body>
